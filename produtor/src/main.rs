@@ -23,7 +23,7 @@ fn main() {
 
     let host = env::var("BUFFER_HOST").unwrap();
     let port = env::var("BUFFER_PORT").unwrap();
-    let total_itens = 1000;
+    let total_itens = 100;
     let intervalo_ms = 100;
 
     let endereco = format!("{}:{}", host, port);
@@ -42,11 +42,11 @@ fn main() {
             Ok(_) => {
                 let mut resposta = String::new();
                 if reader.read_line(&mut resposta).is_ok() {
-                    println!("[PRODUTOR] Item {}/{} produzido", i, total_itens);
+                    println!("[PRODUTOR] Item {}/{} produzido: {}", i, total_itens, numero);
                 }
             }
             Err(e) => {
-                eprintln!("[PRODUTOR] Erro ao enviar item {}: {}", i, e);
+                eprintln!("[PRODUTOR] Erro ao enviar item {}: {}. Erro: {}", i, numero, e);
                 break;
             }
         }
@@ -55,8 +55,5 @@ fn main() {
     }
 
     println!("-------------------------------------------");
-    println!(
-        "[PRODUTOR] Produção finalizada. {} itens produzidos.",
-        total_itens
-    );
+    println!("[PRODUTOR] Produção finalizada. {} itens produzidos.", total_itens);
 }
