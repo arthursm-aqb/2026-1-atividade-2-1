@@ -1,5 +1,5 @@
 # Atividade 1.2 Avaliativa de 2026.1 - 1o Bimestre - Sistemas operacionais
-[Slide](https://www.canva.com/design/DAHOQegbG6Y/YndrbbH3mq-N5s21VNp4gw/edit)
+[Slide](https://canva.link/0wul7m6chyy9vxl)
 ## Informações gerais
 
 - **Público alvo**: alunos da disciplina de **Sistemas operacionais** do curso de [TADS](https://diatinf.ifrn.edu.br/cursos/tecnologia-em-analise-e-desenvolvimento-de-sistemas/) na [DIATINF](https://diatinf.ifrn.edu.br/) no [CNAT-IFRN](https://portal.ifrn.edu.br/campus/natalcentral/)
