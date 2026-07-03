@@ -1,0 +1,27 @@
+services:
+  buffer:
+    build: .
+    container_name: buffer
+    command: ./target/release/buffer
+    environment:
+      BUFFER_PORT: 8080
+    ports:
+      - "8080:8080"
+
+  produtor:
+    build: .
+    command: ./target/release/produtor
+    depends_on:
+      - buffer
+    environment:
+      BUFFER_HOST: buffer
+      BUFFER_PORT: 8080
+
+  consumidor:
+    build: .
+    command: ./target/release/consumidor
+    depends_on:
+      - buffer
+    environment:
+      BUFFER_HOST: buffer
+      BUFFER_PORT: 8080

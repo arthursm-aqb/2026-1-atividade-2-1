@@ -1,0 +1,19 @@
+[package]
+name = "docker-buffer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rand = "0.8"
+
+[[bin]]
+name = "buffer"
+path = "src/buffer.rs"
+
+[[bin]]
+name = "produtor"
+path = "src/produtor.rs"
+
+[[bin]]
+name = "consumidor"
+path = "src/consumidor.rs"
